@@ -111,13 +111,13 @@ const Contact = props => {
       <div className="row">
         <MyForm method="post" onSubmit={sendEmail}>
           <div className="row">
-            <input type="text" name="from_name" placeholder="Your name" required />
+            <input type="text" name="from_name" aria-label="Your name" placeholder="Your name" required />
           </div>
           <div className="row">
-            <input type="text" name="from_email" placeholder="Your email address" required />
+            <input type="text" name="from_email" aria-label="Your email address" placeholder="Your email address" required />
           </div>
           <div className="row">
-            <textarea rows="4" cols="50" name="message" placeholder="Short description of your project"
+            <textarea rows="4" cols="50" name="message" aria-label="Short description of your project" placeholder="Short description of your project"
               required></textarea>
           </div>
           <br />
