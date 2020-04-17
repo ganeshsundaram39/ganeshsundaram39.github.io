@@ -28,6 +28,7 @@ const Background = ({ children, styles }) => (
           Tag="section"
           fluid={backgroundFluidImageStack}
           className="contact-bg"
+          id="contact"
           style={{
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',

@@ -148,7 +148,7 @@ const WorkSamples = () => {
   const [count, setCount] = useState(1)
 
   return (
-    <Section id="work-samples">
+    <Section id="samples">
       <div className="row center">
         <h2>My Work Samples</h2>
       </div>
