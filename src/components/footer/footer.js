@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 
 import styled from "styled-components"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import SocialLinks from '../header/social-links'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import SocialLinks from "../header/social-links"
 
 const Footer = styled.footer`
   & {
@@ -40,7 +40,7 @@ const Footer = styled.footer`
   .footer__links * {
     font-size: 0.9rem;
   }
-  .footer__links .links a{
+  .footer__links .links a {
     height: 0;
   }
   .footer__links .links svg {
@@ -68,10 +68,11 @@ const Footer = styled.footer`
     .footer__links * {
       font-size: 1rem;
     }
-    .icon-menu,.icon-cancel{
+    .icon-menu,
+    .icon-cancel {
       display: none;
     }
-    nav{
+    nav {
       display: block;
     }
   }
@@ -101,7 +102,6 @@ const Footer = styled.footer`
       font-size: 1.1rem;
     }
   }
-
 `
 
 const footer = props => {
@@ -118,12 +118,11 @@ const footer = props => {
             <span id="gmail">ganeshsundaram39@gmail.com</span>
           </div>
         </div>
-        <div className="links">
-          {SocialLinks}
-        </div>
+        <div className="links">{SocialLinks}</div>
       </div>
       <div className="row center">
-        Developed with <span style={{ color: 'red' }}>💖</span> by Ganesh Sundaram | {new Date().getFullYear()}
+        Developed with <span style={{ color: "red" }}>💖</span> by Ganesh
+        Sundaram | {new Date().getFullYear()}
       </div>
     </Footer>
   )

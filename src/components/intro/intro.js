@@ -1,11 +1,27 @@
-import React from 'react'
+import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5, faReact, faAngular, faSass, faNode, faUbuntu, faGit, faCss3Alt, faJs } from '@fortawesome/free-brands-svg-icons'
-import { faDatabase, faLightbulb, faChartBar, faCode, faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faHtml5,
+  faReact,
+  faAngular,
+  faSass,
+  faNode,
+  faUbuntu,
+  faGit,
+  faCss3Alt,
+  faJs,
+} from "@fortawesome/free-brands-svg-icons"
+import {
+  faDatabase,
+  faLightbulb,
+  faChartBar,
+  faCode,
+  faTachometerAlt,
+} from "@fortawesome/free-solid-svg-icons"
 
 import styled from "styled-components"
 
@@ -23,7 +39,7 @@ const Section = styled.section`
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin:15px;
+    margin: 15px;
   }
 
   & p {
@@ -62,13 +78,13 @@ const Section = styled.section`
   }
 
   @media only screen and (max-width: 1023px) {
-      & .box svg {
+    & .box svg {
       font-size: 150%;
     }
   }
 
   @media only screen and (max-width: 767px) {
-      & p {
+    & p {
       width: 99%;
       margin: 0 1%;
     }
@@ -76,7 +92,7 @@ const Section = styled.section`
     & .box svg {
       margin-bottom: 5px;
     }
-      .profile-pic-container {
+    .profile-pic-container {
       justify-content: center;
     }
 
@@ -96,7 +112,7 @@ const Section = styled.section`
   }
 
   @media (max-width: 576px) {
-      & .box:first-child {
+    & .box:first-child {
       margin-top: 10%;
     }
     & .row:last-child .box:first-child {
@@ -104,7 +120,6 @@ const Section = styled.section`
     }
   }
 `
-
 
 const skills = [
   { title: "HTML", icon: faHtml5 },
@@ -120,7 +135,6 @@ const skills = [
 ]
 
 const Intro = () => {
-
   const data = useStaticQuery(graphql`
     query MyQuery {
       placeholderImage: file(relativePath: { eq: "profilepic2018.jpg" }) {
@@ -149,19 +163,22 @@ const Intro = () => {
         </div>
         <div className="col span-1-of-2">
           <p>
-            Hi, I'm Ganesh. I'm a Front-End developer living in Mumbai, India.
-            I spend my days practicing my coding skills and learning new
+            Hi, I'm Ganesh. I'm a Front-End developer living in Mumbai, India. I
+            spend my days practicing my coding skills and learning new
             techniques. I would love to build a great and fancy website for you.
-            Aside from web development, I enjoy listening to music, nature walk, exercise and
-            stalking beautiful looking websites.
-        </p>
+            Aside from web development, I enjoy listening to music, nature walk,
+            exercise and stalking beautiful looking websites.
+          </p>
         </div>
       </div>
       <div className="row">
         <ul className="skill-set">
-          {
-            skills.map(skill => <li key={skill.title} title={skill.title}> <FontAwesomeIcon icon={skill.icon} /></li>)
-          }
+          {skills.map(skill => (
+            <li key={skill.title} title={skill.title}>
+              {" "}
+              <FontAwesomeIcon icon={skill.icon} />
+            </li>
+          ))}
         </ul>
       </div>
       <div className="row center">
@@ -171,7 +188,7 @@ const Intro = () => {
           <p>
             Define your audience and goal of your project. Plan the site
             structure and the content carefully.
-        </p>
+          </p>
         </div>
         <div className="col span-1-of-2 box">
           <FontAwesomeIcon icon={faChartBar} />
@@ -180,7 +197,7 @@ const Intro = () => {
             Research current website design trends, marketing techniques and
             analyzing its impact on the audience. Create multiple prototypes
             using pen and paper.
-        </p>
+          </p>
         </div>
       </div>
       <div className="row center">
@@ -190,7 +207,7 @@ const Intro = () => {
           <p>
             Once I'am happy with the prototype I code the project using my
             favorite text editor.
-        </p>
+          </p>
         </div>
         <div className="col span-1-of-2 box">
           <FontAwesomeIcon icon={faTachometerAlt} />
@@ -198,7 +215,7 @@ const Intro = () => {
           <p>
             In the end, I work on responsiveness and make website loading
             blazingly fast.
-        </p>
+          </p>
         </div>
       </div>
     </Section>

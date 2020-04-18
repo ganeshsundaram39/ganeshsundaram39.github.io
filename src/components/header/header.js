@@ -1,13 +1,22 @@
 import React from "react"
-import { Navbar } from './navbar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
-import Background from './background';
-import SocialLinks from './social-links'
+import { Navbar } from "./navbar"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
+import SocialLinks from "./social-links"
 import styled from "styled-components"
 
-const Hero = styled.div`
-  width: 1140px;
+const Hero = styled.header`
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #000000;
+
+  .name-text-box {
+    width: 1140px;
+  }
 
   .tagline {
     font-size: 150%;
@@ -15,15 +24,15 @@ const Hero = styled.div`
     color: #fff;
     letter-spacing: 1px;
     word-spacing: 2px;
-    font-family: 'Righteous', cursive;
+    font-family: "Righteous", cursive;
   }
 
   .social-links {
-    font-size: 170%;
-    margin-top: 15vh;
+    font-size: 150%;
+    margin-top: 10vh;
   }
 
-  .social-links a{
+  .social-links a {
     margin: 0 3vw;
   }
 
@@ -48,7 +57,7 @@ const Hero = styled.div`
   .know-me-better a:link,
   .know-me-better a:visited {
     color: #fff;
-    border: 1px  solid #0f86d2;
+    border: 1px solid #0f86d2;
     border-radius: 200px;
     padding: 10px 30px;
     background-color: #0f86d2;
@@ -57,7 +66,16 @@ const Hero = styled.div`
   .know-me-better a:hover,
   .know-me-better a:active {
     background-size: 2rem 2rem;
-    background-image: linear-gradient(180deg,rgba(0,0,0,0.1) 25%,transparent 25%,transparent 50%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1) 75%,
+      transparent 75%,
+      transparent
+    );
     animation: back 2.8s linear infinite;
   }
 
@@ -69,7 +87,7 @@ const Hero = styled.div`
   }
 
   @media only screen and (max-width: 1200px) {
-    & {
+    .name-text-box {
       width: 100%;
       padding: 0 2%;
     }
@@ -83,27 +101,21 @@ const Hero = styled.div`
   }
 `
 
-const backgroundStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center'
-};
-
 const Header = () => (
-  <Background styles={backgroundStyles}>
+  <Hero>
     <Navbar></Navbar>
-    <Hero>
+    <div className="name-text-box">
       <h1 className="center">Ganesh Sundaram</h1>
       <div className="tagline center">Front-End Web Developer</div>
-      <div className="center social-links">
-        {SocialLinks}
-      </div>
+      <div className="center social-links">{SocialLinks}</div>
       <div className="center know-me-better">
-        <a href="#about" rel="noopener noreferrer">Know Me Better<FontAwesomeIcon icon={faArrowDown} /></a>
+        <a href="#about" rel="noopener noreferrer">
+          Know Me Better
+          <FontAwesomeIcon icon={faArrowDown} />
+        </a>
       </div>
-    </Hero>
-  </Background>
+    </div>
+  </Hero>
 )
 
 export default Header

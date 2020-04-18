@@ -1,6 +1,6 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 const Background = ({ children, styles }) => (
   <StaticQuery
@@ -30,9 +30,9 @@ const Background = ({ children, styles }) => (
           className="contact-bg"
           id="contact"
           style={{
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: '50% 100%',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "50% 100%",
           }}
         >
           {children}

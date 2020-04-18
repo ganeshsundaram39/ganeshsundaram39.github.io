@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
-import Background from './background'
-import emailjs from 'emailjs-com';
+import Background from "./background"
+import emailjs from "emailjs-com"
 
 import styled from "styled-components"
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons"
 
 const MyForm = styled.form`
   & {
@@ -23,6 +23,7 @@ const MyForm = styled.form`
     padding: 2%;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.44);
+    background: transparent;
   }
 
   & input:focus,
@@ -54,7 +55,16 @@ const MyForm = styled.form`
 
   & .send:hover {
     background-size: 2rem 2rem;
-       background-image: linear-gradient(225deg,rgba(0,0,0,0.1) 25%,transparent 25%,transparent 50%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 75%,transparent 75%,transparent);
+    background-image: linear-gradient(
+      225deg,
+      rgba(0, 0, 0, 0.1) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1) 75%,
+      transparent 75%,
+      transparent
+    );
     animation: back 2.8s linear infinite;
     animation-direction: reverse;
   }
@@ -77,28 +87,34 @@ const MyForm = styled.form`
       padding: 4%;
     }
   }
-`;
-
+`
 
 const Contact = props => {
-
   const [sendMessage, setSendMessage] = useState(false)
 
   const sendEmail = e => {
-    e.preventDefault();
-    setSendMessage(true);
-    emailjs.sendForm('ganeshsundaram', 'gscode_template', e.target, 'user_3NB50omIWwpQToXY0ergt')
-      .then(() => {
-        alert('Hey there, I will contact you soon!');
-        setSendMessage(false);
-      },
+    e.preventDefault()
+    setSendMessage(true)
+    emailjs
+      .sendForm(
+        "ganeshsundaram",
+        "gscode_template",
+        e.target,
+        "user_3NB50omIWwpQToXY0ergt"
+      )
+      .then(
+        () => {
+          alert("Hey there, I will contact you soon!")
+          setSendMessage(false)
+        },
         err => {
-          alert('Something went wrong!');
+          alert("Something went wrong!")
           console.error(
-            'Send email failed!\r\n Response:\n ' + JSON.stringify(err)
-          );
-          setSendMessage(false);
-        });
+            "Send email failed!\r\n Response:\n " + JSON.stringify(err)
+          )
+          setSendMessage(false)
+        }
+      )
   }
   return (
     <Background>
@@ -111,21 +127,43 @@ const Contact = props => {
       <div className="row">
         <MyForm method="post" onSubmit={sendEmail}>
           <div className="row">
-            <input type="text" name="from_name" aria-label="Your name" placeholder="Your name" required />
+            <input
+              type="text"
+              name="from_name"
+              aria-label="Your name"
+              placeholder="Your name"
+              required
+            />
           </div>
           <div className="row">
-            <input type="text" name="from_email" aria-label="Your email address" placeholder="Your email address" required />
+            <input
+              type="text"
+              name="from_email"
+              aria-label="Your email address"
+              placeholder="Your email address"
+              required
+            />
           </div>
           <div className="row">
-            <textarea rows="4" cols="50" name="message" aria-label="Short description of your project" placeholder="Short description of your project"
-              required></textarea>
+            <textarea
+              rows="4"
+              cols="50"
+              name="message"
+              aria-label="Short description of your project"
+              placeholder="Short description of your project"
+              required
+            ></textarea>
           </div>
           <br />
           <div className="row">
             <button className="send">
-              {
-                sendMessage ? 'Sending...' : <>Send Message <FontAwesomeIcon icon={faTelegramPlane} /></>
-              }
+              {sendMessage ? (
+                "Sending..."
+              ) : (
+                <>
+                  Send Message <FontAwesomeIcon icon={faTelegramPlane} />
+                </>
+              )}
             </button>
           </div>
         </MyForm>

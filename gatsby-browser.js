@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 
 // custom typeface
-import "typeface-source-sans-pro";
+import "typeface-source-sans-pro"
 import "typeface-righteous"
 import "normalize.css"
 import "./src/styles/global.css"
@@ -24,7 +24,7 @@ export const onClientEntry = () => {
 export function onServiceWorkerUpdateReady() {
   // window.location.reload(true)
   window.location.href = window.location.href
-};
+}
 
 // export const onInitialClientRender = () => {
 //   console.log("onInitialClientRender")

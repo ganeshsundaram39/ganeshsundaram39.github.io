@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components"
 
 const Nav = styled.nav`
@@ -53,14 +53,18 @@ const Nav = styled.nav`
     & {
       display: block;
     }
-}
+  }
 `
 
 const navs = [
-  { name: 'About', href: '#about', hide: true, },
-  { name: 'Samples', href: '#samples', hide: true, },
-  { name: 'Blog', href: 'https://codepen.io/ganeshsundaram39/posts/published/', openBlank: true },
-  { name: 'Resume', href: '/resume/resume.pdf', hide: true, download: true },
+  { name: "About", href: "#about", hide: true },
+  { name: "Samples", href: "#samples", hide: true },
+  {
+    name: "Blog",
+    href: "https://codepen.io/ganeshsundaram39/posts/published/",
+    openBlank: true,
+  },
+  { name: "Resume", href: "/resume/resume.pdf", hide: true, download: true },
 ]
 
 export const Navbar = () => {
@@ -68,7 +72,21 @@ export const Navbar = () => {
     <Nav>
       <div className="row">
         <ul className="main-nav">
-          {navs.map(nav => nav.hide ? null : <li key={nav.name}><a rel="noopener noreferrer" className={nav.name === 'Resume' ? 'resume' : ''} {...(nav.openBlank && { target: "_blank" })} {...(nav.download && { download: true })} href={nav.href}>{nav.name}</a></li>)}
+          {navs.map(nav =>
+            nav.hide ? null : (
+              <li key={nav.name}>
+                <a
+                  rel="noopener noreferrer"
+                  className={nav.name === "Resume" ? "resume" : ""}
+                  {...(nav.openBlank && { target: "_blank" })}
+                  {...(nav.download && { download: true })}
+                  href={nav.href}
+                >
+                  {nav.name}
+                </a>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </Nav>

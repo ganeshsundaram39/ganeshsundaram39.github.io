@@ -1,14 +1,22 @@
-const baseColor = `#0f86d2`;
-const backgroundColor = `#fafafa`;
+const baseColor = `#0f86d2`
+const backgroundColor = `#fafafa`
 
 module.exports = {
   siteMetadata: {
     title: `Ganesh Sundaram`,
     description: `Ganesh Sundaram is a Front-End Javascript developer living in Mumbai, India.`,
     author: `@ganeshsundaram_`,
-    keywords: ['front-end', 'web', 'developer', 'mumbai', 'javascript', 'react.js', 'angular',],
+    keywords: [
+      "front-end",
+      "web",
+      "developer",
+      "mumbai",
+      "javascript",
+      "react.js",
+      "angular",
+    ],
     siteUrl: `https://ganeshsundaram39.github.io/`,
-    baseColor
+    baseColor,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,59 +41,59 @@ module.exports = {
         theme_color: baseColor,
         background_color: backgroundColor,
         display: `standalone`,
-        icon: `static/icons/icon-152x152.png`,// This path is relative to the root of the site.
+        icon: `static/icons/icon-152x152.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: "/icons/icon-16x16.png",
             sizes: "16x16",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-32x32.png",
             sizes: "32x32",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-72x72.png",
             sizes: "72x72",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-96x96.png",
             sizes: "96x96",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-128x128.png",
             sizes: "128x128",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-144x144.png",
             sizes: "144x144",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-152x152.png",
             sizes: "152x152",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-192x192.png",
             sizes: "192x192",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-384x384.png",
             sizes: "384x384",
-            type: "image/png"
+            type: "image/png",
           },
           {
             src: "/icons/icon-512x512.png",
             sizes: "512x512",
-            type: "image/png"
-          }
-        ]
+            type: "image/png",
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
