@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-const Background = ({ children, styles }) => (
+const Background = ({ children }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -30,7 +30,11 @@ const Background = ({ children, styles }) => (
             backgroundPosition: 'top',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
-            ...styles
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'relative'
           }}
         >
           {children}

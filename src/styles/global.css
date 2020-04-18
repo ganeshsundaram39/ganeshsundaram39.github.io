@@ -31,7 +31,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility
 }
 
 a {

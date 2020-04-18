@@ -10,6 +10,7 @@ const Nav = styled.nav`
     display: flex;
     list-style: none;
     margin-top: 6vh;
+    margin-right: 6vh;
   }
 
   .main-nav li {
@@ -48,34 +49,6 @@ const Nav = styled.nav`
       margin-left: 5vw;
     }
   }
-  @media only screen and (max-width: 480px) {
-    & {
-      position: fixed;
-      background:#fff;
-      right:0;
-      height:100vh;
-      width:100vw;
-      transition: width .2s ease-in-out;
-      display: none;
-    }
-    & .row {
-      width:100%;
-      height:100%;
-    }
-    & .main-nav {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .main-nav li{
-      margin-bottom: 15%;
-    }
-    .main-nav li a:link, .main-nav li a:visited{
-      color: #000;
-      font-size: 150%;
-      letter-spacing: 1px;
-    }
-  }
   @media only screen and (min-width: 480px) {
     & {
       display: block;
@@ -84,10 +57,9 @@ const Nav = styled.nav`
 `
 
 const navs = [
-  { name: 'About', href: '#about' },
-  { name: 'Samples', href: '#samples' },
+  { name: 'About', href: '#about', hide: true, },
+  { name: 'Samples', href: '#samples', hide: true, },
   { name: 'Blog', href: 'https://codepen.io/ganeshsundaram39/posts/published/', openBlank: true },
-  { name: 'Contact', href: '#contact' },
   { name: 'Resume', href: '/resume/resume.pdf', hide: true, download: true },
 ]
 
@@ -96,7 +68,7 @@ export const Navbar = () => {
     <Nav>
       <div className="row">
         <ul className="main-nav">
-          {navs.map(nav => nav.hide ? null : <li key={nav.name}><a rel="noopener noreferrer" {...(nav.openBlank && { target: "_blank" })} {...(nav.download && { download: true })} href={nav.href}>{nav.name}</a></li>)}
+          {navs.map(nav => nav.hide ? null : <li key={nav.name}><a rel="noopener noreferrer" className={nav.name === 'Resume' ? 'resume' : ''} {...(nav.openBlank && { target: "_blank" })} {...(nav.download && { download: true })} href={nav.href}>{nav.name}</a></li>)}
         </ul>
       </div>
     </Nav>

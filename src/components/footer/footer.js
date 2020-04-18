@@ -123,9 +123,8 @@ const footer = props => {
         </div>
       </div>
       <div className="row center">
-        Developed with <span style={{ color: 'red' }}>💖</span> by Ganesh Sundaram |
-      2020
-    </div>
+        Developed with <span style={{ color: 'red' }}>💖</span> by Ganesh Sundaram | {new Date().getFullYear()}
+      </div>
     </Footer>
   )
 }
