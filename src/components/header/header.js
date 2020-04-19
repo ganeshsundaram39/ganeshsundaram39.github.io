@@ -3,7 +3,7 @@ import { Navbar } from "./navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import SocialLinks from "./social-links"
-import Background from './Background';
+import Background from './background';
 import styled from "styled-components"
 
 const NameTextBox = styled.div`
