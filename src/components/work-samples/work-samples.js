@@ -115,7 +115,7 @@ const works = [
     para:
       "GOT is a SPA developed using Angular and it gives you information related to Game of thrones.",
     alt: "GOT",
-    live: "https://ganeshsundaram39.github.io/got/dist/got-assignment/",
+    live: "https://ganeshsundaram39.github.io/got/",
   },
   {
     image: "open-movie",
