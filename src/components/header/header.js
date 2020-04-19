@@ -3,19 +3,12 @@ import { Navbar } from "./navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import SocialLinks from "./social-links"
+import Background from './Background';
 import styled from "styled-components"
 
-const Hero = styled.header`
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background-color: #000000;
-
-  .name-text-box {
-    width: 1140px;
+const NameTextBox = styled.div`
+  & {
+    max-width: 1140px;
   }
 
   .tagline {
@@ -87,7 +80,7 @@ const Hero = styled.header`
   }
 
   @media only screen and (max-width: 1200px) {
-    .name-text-box {
+    & {
       width: 100%;
       padding: 0 2%;
     }
@@ -105,9 +98,9 @@ const Hero = styled.header`
 `
 
 const Header = () => (
-  <Hero>
+  <Background>
     <Navbar></Navbar>
-    <div className="name-text-box">
+    <NameTextBox >
       <h1 className="center">Ganesh Sundaram</h1>
       <div className="tagline center">Front-End Web Developer</div>
       <div className="center social-links">{SocialLinks}</div>
@@ -117,8 +110,8 @@ const Header = () => (
           <FontAwesomeIcon icon={faArrowDown} />
         </a>
       </div>
-    </div>
-  </Hero>
+    </NameTextBox>
+  </Background>
 )
 
 export default Header

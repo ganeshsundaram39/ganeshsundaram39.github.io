@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import emailjs from "emailjs-com"
 
 import styled from "styled-components"
-
+import Background from './background'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTelegramPlane } from "@fortawesome/free-brands-svg-icons"
 
@@ -116,7 +116,7 @@ const Contact = props => {
       )
   }
   return (
-    <section>
+    <Background>
       <div className="row">
         <h2 className="center">Get In Touch</h2>
       </div>
@@ -159,15 +159,15 @@ const Contact = props => {
               {sendMessage ? (
                 "Sending..."
               ) : (
-                <>
-                  Send Message <FontAwesomeIcon icon={faTelegramPlane} />
-                </>
-              )}
+                  <>
+                    Send Message <FontAwesomeIcon icon={faTelegramPlane} />
+                  </>
+                )}
             </button>
           </div>
         </MyForm>
       </div>
-    </section>
+    </Background>
   )
 }
 
