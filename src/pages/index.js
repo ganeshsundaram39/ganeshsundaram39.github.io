@@ -4,7 +4,6 @@ import Layout from "../components/layout"
 import Intro from "../components/intro/intro"
 import WorkSamples from "../components/work-samples/work-samples"
 import Contact from "../components/contact/contact"
-import Map from "../components/map/map"
 import Footer from "../components/footer/footer"
 
 const IndexPage = () => (
@@ -13,7 +12,6 @@ const IndexPage = () => (
     <Intro></Intro>
     <WorkSamples></WorkSamples>
     <Contact></Contact>
-    <Map></Map>
     <Footer></Footer>
   </Layout>
 )

@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-import Background from "./background"
 import emailjs from "emailjs-com"
 
 import styled from "styled-components"
@@ -117,7 +116,7 @@ const Contact = props => {
       )
   }
   return (
-    <Background>
+    <section>
       <div className="row">
         <h2 className="center">Get In Touch</h2>
       </div>
@@ -168,7 +167,7 @@ const Contact = props => {
           </div>
         </MyForm>
       </div>
-    </Background>
+    </section>
   )
 }
 

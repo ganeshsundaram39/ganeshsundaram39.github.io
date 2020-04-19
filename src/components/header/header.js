@@ -96,7 +96,10 @@ const Hero = styled.header`
   @media only screen and (max-width: 480px) {
     .social-links {
       word-spacing: 30px;
-      margin-top: 70px;
+      margin-top: 5vh;
+    }
+    .know-me-better {
+      margin-top: 6vh;
     }
   }
 `
