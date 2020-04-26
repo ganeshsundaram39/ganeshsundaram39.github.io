@@ -55,7 +55,7 @@ Most of the time I enable only those which I need at a given moment.
 
 <br>
 
-**🔩 Browser Extensions**<br>
+**🔩 Chrome Extensions**<br>
 [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) - A React debugging tools to the Chrome Developer Tools.<br>
 [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) - Redux DevTools for debugging application's state changes.<br>
 [ColorZilla](https://www.colorzilla.com/chrome/) - With ColorZilla you can get a color reading from any point in your browser, quickly adjust this color and paste it into another program.<br>
