@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-
+import { Link } from "gatsby"
 const Nav = styled.nav`
   position: absolute;
   top: 0;
-  width:100%;
+  width: 100%;
 
   .main-nav {
     display: flex;
@@ -52,14 +52,8 @@ const Nav = styled.nav`
 `
 
 const navs = [
-  { name: "About", href: "#about", hide: true },
-  { name: "Samples", href: "#samples", hide: true },
-  {
-    name: "What I Use",
-    href: "https://codepen.io/ganeshsundaram39/post/tool-i-use-for-web-development",
-    openBlank: true,
-  },
-  { name: "Resume", href: "/resume/resume.pdf", hide: true, download: true },
+  { name: "Home", to: "/" },
+  { name: "uses", to: "/uses" },
 ]
 
 export const Navbar = () => {
@@ -67,20 +61,28 @@ export const Navbar = () => {
     <Nav>
       <div className="row">
         <ul className="main-nav">
-          {navs.map(nav =>
-            nav.hide ? null : (
-              <li key={nav.name}>
-                <a
-                  rel="noopener noreferrer"
-                  className={nav.name === "Resume" ? "resume" : ""}
-                  {...(nav.openBlank && { target: "_blank" })}
-                  {...(nav.download && { download: true })}
-                  href={nav.href}
-                >
-                  {nav.name}
-                </a>
-              </li>
-            )
+          {navs.map(nav => (
+            <li key={nav.name}>
+              <Link
+                to={nav.to}
+                activeStyle={{ borderBottom: "2px solid #0669a8" }}
+              >
+                {nav.name}
+              </Link>
+            </li>
+          ))}
+          {false && (
+            <li>
+              {" "}
+              <a
+                rel="noopener noreferrer"
+                className="resume"
+                download
+                href="/resume/resume.pdf"
+              >
+                Resume
+              </a>
+            </li>
           )}
         </ul>
       </div>

@@ -3,7 +3,7 @@ import { Navbar } from "./navbar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import SocialLinks from "./social-links"
-import Background from './background';
+import Background from "./background"
 import styled from "styled-components"
 
 const NameTextBox = styled.div`
@@ -11,24 +11,16 @@ const NameTextBox = styled.div`
     max-width: 1140px;
   }
 
-  .tagline {
-    font-size: 150%;
-    margin-top: 15px;
-    color: #fff;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    font-family: "Righteous", cursive;
-  }
-
   .social-links {
-    font-size: 150%;
     margin-top: 10vh;
   }
 
   .social-links a {
     margin: 0 3vw;
   }
-
+  .social-links svg {
+    font-size: 150%;
+  }
   .social-links a:link,
   .social-links a:visited {
     display: inline-block;
@@ -100,7 +92,7 @@ const NameTextBox = styled.div`
 const Header = () => (
   <Background>
     <Navbar></Navbar>
-    <NameTextBox >
+    <NameTextBox>
       <h1 className="center">Ganesh Sundaram</h1>
       <div className="tagline center">Front-End Web Developer</div>
       <div className="center social-links">{SocialLinks}</div>

@@ -46,7 +46,8 @@ const Section = styled.section`
     font-size: 105%;
     width: 90%;
     margin: 4% 5%;
-    line-height: 145%;
+    line-height: 150%;
+    word-spacing: 1px;
   }
 
   .skill-set {
@@ -60,9 +61,18 @@ const Section = styled.section`
   }
 
   .skill-set li {
-    font-size: 350%;
     margin-top: 5%;
     flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .skill-set li svg {
+    font-size: 400%;
+  }
+  .skill-set li svg:hover {
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: scale(1.2);
   }
 
   & .box {
@@ -105,10 +115,6 @@ const Section = styled.section`
       width: 100%;
       margin: 5% 1%;
     }
-
-    .skill-set li {
-      margin-left: 5%;
-    }
   }
 
   @media (max-width: 576px) {
@@ -137,7 +143,7 @@ const skills = [
 const Intro = () => {
   const data = useStaticQuery(graphql`
     query MyQuery {
-      placeholderImage: file(relativePath: { eq: "profilepic2018.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "profilepic.jpg" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           fluid(quality: 70, maxWidth: 300) {
@@ -163,8 +169,8 @@ const Intro = () => {
         </div>
         <div className="col span-1-of-2">
           <p>
-            Hi, I'm Ganesh. I'm a Front-End developer living in Mumbai, India. I
-            spend my days practicing my coding skills and learning new
+            Hey, I'm Ganesh. I'm a Front-End developer living in Mumbai, India.
+            I spend my days practicing my coding skills and learning new
             techniques. I would love to build a great and fancy website for you.
             Aside from web development, I enjoy listening to music, nature walk,
             exercise and stalking beautiful looking websites.

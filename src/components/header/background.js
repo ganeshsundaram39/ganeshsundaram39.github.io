@@ -1,8 +1,8 @@
-import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-const Background = ({ children }) => (
+const Background = ({ children, styles }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -26,15 +26,16 @@ const Background = ({ children }) => (
           fluid={backgroundFluidImageStack}
           className="header-bg"
           style={{
-            height: '80vh',
-            backgroundPosition: 'top',
-            backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            position: 'relative'
+            height: "80vh",
+            backgroundPosition: "top",
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            ...styles,
           }}
         >
           {children}

@@ -28,10 +28,10 @@ html,
 body {
   background-color: #fff;
   color: #555;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   font-weight: 300;
-  text-rendering: optimizeLegibility
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -47,7 +47,7 @@ a {
 h1,
 h2,
 h3 {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   margin: 0;
   letter-spacing: 2px;
   word-spacing: 4px;
@@ -69,7 +69,7 @@ h2:after {
   display: block;
   height: 3px;
   background-color: #0f86d2;
-  content: '';
+  content: "";
   width: 50px;
   margin: 0 auto;
   margin-top: 10px;
@@ -90,11 +90,27 @@ section {
   margin: 0 auto;
 }
 
-.center{
+.center {
   text-align: center;
 }
 
-  @keyframes back{0%{background-position:0 0;}100%{background-position:2rem 4rem;}}
+.tagline {
+  font-size: 150%;
+  margin-top: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-family: "Righteous", cursive;
+}
+
+@keyframes back {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2rem 4rem;
+  }
+}
 
 @media only screen and (max-width: 1200px) {
   .row {
@@ -127,7 +143,7 @@ section {
   .row {
     padding: 0 4%;
   }
-    .col {
+  .col {
     width: 100%;
     margin: 0 0 4% 0;
   }
@@ -142,8 +158,6 @@ section {
     font-size: 250%;
   }
 }
-
-
 
 /*---------------------------------------------*/
 
