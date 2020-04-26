@@ -5,7 +5,7 @@ import Intro from "../components/intro/intro"
 import WorkSamples from "../components/work-samples/work-samples"
 import Contact from "../components/contact/contact"
 import Footer from "../components/footer/footer"
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 const GridStyles = createGlobalStyle`
   .row {
@@ -46,7 +46,7 @@ const GridStyles = createGlobalStyle`
       width: 100%;
     }
   }
-`;
+`
 
 const IndexPage = () => (
   <Layout title="Front-End Web Developer">
