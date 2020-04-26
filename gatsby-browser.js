@@ -11,7 +11,6 @@ import "typeface-source-sans-pro"
 import "typeface-righteous"
 import "normalize.css"
 import "./src/styles/global.css"
-import "./src/styles/grid.css"
 
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
