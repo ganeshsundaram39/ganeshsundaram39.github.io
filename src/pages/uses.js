@@ -1,30 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
-import Background from "../components/header/background"
 import styled from "styled-components"
-import { Navbar } from "../components/header/navbar"
-import Footer from "../components/footer/footer"
+import Common from '../components/common/common'
 
-const NameTextBox = styled.div`
-  & {
-    max-width: 1140px;
-  }
-  @media only screen and (max-width: 1200px) {
-    & {
-      width: 100%;
-      padding: 0 2%;
-    }
-  }
-`
-
-const Wrapper = styled.article`
+const Wrapper = styled.section`
   & {
     display: flex;
     justify-content: center;
     background: #e8e8e8cc;
+    padding:0;
   }
-  & > div {
+`
+
+const MarkDownBody = styled.article`
+  &  {
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
       0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background: #fff;
@@ -47,7 +36,7 @@ const Wrapper = styled.article`
     color: #0669a8;
   }
   @media only screen and (max-width: 767px) {
-    & > div {
+    & {
       width: 90vw;
     }
   }
@@ -56,23 +45,15 @@ const Wrapper = styled.article`
 const UsesPage = ({
   data, // this prop will be injected by the GraphQL query below.
 }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data // data.markdownRemark holds your  data
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout title="Uses">
-      <Background styles={{ height: "60vh" }}>
-        <Navbar></Navbar>
-        <NameTextBox>
-          <h1 className="center">{frontmatter.title}</h1>
-          <div className="tagline center">{frontmatter.subtitle}</div>
-        </NameTextBox>
-      </Background>
+    <Common title={frontmatter.title} subtitle={frontmatter.subtitle} styles={{ height: '60vh' }}>
       <Wrapper>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <MarkDownBody dangerouslySetInnerHTML={{ __html: html }} />
       </Wrapper>
-      <Footer></Footer>
-    </Layout>
+    </Common>
   )
 }
 

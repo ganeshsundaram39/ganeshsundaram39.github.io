@@ -2,6 +2,8 @@
 path: "/uses"
 title: "Uses"
 subtitle: "Tools I use for web development"
+date: "2020-04-26"
+description: "My Uses"
 ---
 
 As a Front-end Dev, I use a lot of tools and extensions for better developer experience and productivity.😎
@@ -38,6 +40,8 @@ Most of the time I enable only those which I need at a given moment.
 [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) - Automatically add HTML/XML close tag, same as Visual Studio IDE or Sublime Text.
 
 [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - Auto rename paired HTML/XML tag.
+
+[Highlight Matching Tag](https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag) - Highlights matching closing and opening tags.
 
 [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) - Easily switch between projects.
 
@@ -77,4 +81,4 @@ Most of the time I enable only those which I need at a given moment.
 <hr>
 <br>
 
-![Thank You](../images/thank-you.jpg)
+![Thank You](./thank-you.jpg)

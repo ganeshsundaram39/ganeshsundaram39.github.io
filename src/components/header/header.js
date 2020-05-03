@@ -12,7 +12,7 @@ const NameTextBox = styled.div`
   }
 
   .social-links {
-    margin-top: 10vh;
+    margin-top: 8vh;
   }
 
   .social-links a {
@@ -34,7 +34,7 @@ const NameTextBox = styled.div`
   }
 
   .know-me-better {
-    margin-top: 9vh;
+    margin-top: 8vh;
     font-size: 110%;
     font-weight: 500;
   }

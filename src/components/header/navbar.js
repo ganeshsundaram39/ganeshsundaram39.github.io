@@ -52,7 +52,8 @@ const Nav = styled.nav`
 `
 
 const navs = [
-  { name: "Home", to: "/" },
+  { name: "home", to: "/" },
+  // { name: "blog", to: "/blog" },
   { name: "uses", to: "/uses" },
 ]
 

@@ -169,7 +169,7 @@ const Intro = () => {
         </div>
         <div className="col span-1-of-2">
           <p>
-            Hey, I'm Ganesh. I'm a Front-End developer living in Mumbai, India.
+            👋Hey, I'm Ganesh. I'm a Front-End developer living in Mumbai, India.
             I spend my days practicing my coding skills and learning new
             techniques. I would love to build a great and fancy website for you.
             Aside from web development, I enjoy listening to music, nature walk,
