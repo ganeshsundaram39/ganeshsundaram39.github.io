@@ -3,7 +3,7 @@ import Header from "../components/header/header"
 import Layout from "../components/layout"
 import Intro from "../components/intro/intro"
 import WorkSamples from "../components/work-samples/work-samples"
-import Map from '../components/map/map'
+import Map from "../components/map/map"
 import Contact from "../components/contact/contact"
 import Footer from "../components/footer/footer"
 import { createGlobalStyle } from "styled-components"

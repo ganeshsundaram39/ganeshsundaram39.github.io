@@ -150,7 +150,7 @@ const WorkSamples = () => {
             name
             childImageSharp {
               fluid(quality: 70, maxWidth: 450) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

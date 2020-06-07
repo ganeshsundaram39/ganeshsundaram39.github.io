@@ -9,10 +9,10 @@ const FontAwesomeStyles = createGlobalStyle`
     ${dom.css()}
 `
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, description }) => {
   return (
     <>
-      <SEO title={title} />
+      <SEO title={title} description={description + " by Ganesh Sundaram"} />
       <FontAwesomeStyles />
       {children}
     </>

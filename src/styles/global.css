@@ -45,8 +45,7 @@ a {
 /*---------------------------------------------*/
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: "Righteous", cursive;
   margin: 0;
   letter-spacing: 2px;
@@ -77,7 +76,9 @@ h2:after {
 
 h3 {
   font-size: 100%;
-  margin-bottom: 15px;
+  color: #0f86d2;
+}
+h4 {
   color: #0f86d2;
 }
 
@@ -164,18 +165,21 @@ section {
 /* Custom Scrollbar*/
 
 /*---------------------------------------------*/
-::-webkit-scrollbar-thumb:hover {
-  background: #0669a8;
-}
 
-::-webkit-scrollbar-thumb {
-  background-color: #0f86d2;
-}
+@media (hover: hover) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0669a8;
+  }
 
-::-webkit-scrollbar-track {
-  background-color: #c3bfc0;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: #0f86d2;
+  }
 
-::-webkit-scrollbar {
-  width: 6px;
+  ::-webkit-scrollbar-track {
+    background-color: #c3bfc0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
 }

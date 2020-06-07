@@ -1,80 +1,117 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
-import Common from '../components/common/common'
+import Common from "../components/common/common"
+import Img from "gatsby-image"
 
+const PostWrapper = styled.div`
+  & {
+    position: relative;
+    height: 100%;
+  }
+  hr {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+`
 
-const PostWrapper = styled.section`
-  display: flex;
-    flex-direction: row-reverse;
-    padding: 13vh 5vw;
-    min-height:100vh;
-`
-const Posts = styled.div`
-  flex-basis:80%;
-  display:flex;
-  flex-wrap:wrap;
-  align-content: flex-start;
-`
 const Post = styled.article`
-  padding: 0;
-  transition: 0.1s ease-in;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-  border-width: 1px;
-  border-color: #EDF2F7;
   display: flex;
-  flex-direction: column;
+  margin-bottom: 25px;
+  .featured-image-wrapper {
+    flex-basis: 35%;
+  }
+
+  .other-frontmatter {
+    flex-basis: 65%;
+    padding-left: 2%;
+  }
+  strong {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  @media only screen and (max-width: 767px) {
+    & {
+      flex-direction: column;
+    }
+    .other-frontmatter {
+      padding-left: 0%;
+      padding-top: 4%;
+    }
+  }
 `
 
-const SearchPost = styled.div`
-  flex-basis:20%;
-`
+const Posts = props => {
+  return props.posts.map(({ node }) => {
+    return (
+      <Post key={node.fields.slug}>
+        <div className="featured-image-wrapper">
+          {" "}
+          <Img
+            fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+            backgroundColor
+            style={{
+              boxShadow: `0px 10px 1px #ddd, 0 10px 20px #ccc`,
+            }}
+          />
+        </div>
+        <div className="other-frontmatter">
+          <h3>
+            <Link to={node.fields.slug}>
+              {node.frontmatter.title} {node.frontmatter.subtitle}
+            </Link>
+          </h3>
+          <strong>{node.frontmatter.date}</strong>
+          <p>{node.frontmatter.description}.</p>
+        </div>
+      </Post>
+    )
+  })
+}
 
-const BlogPage = ({
-  data, // this prop will be injected by the GraphQL query below.
-}) => {
-  console.log({ data })
-  const posts = data.allMarkdownRemark.edges // data.markdownRemark holds your post data
-  console.log({ posts })
-
+const BlogPage = ({ data }) => {
   return (
-    <Common title={'Blog'} subtitle={'Talking about web development, life or just rambling'} styles={{ height: '50vh' }}>
+    <Common
+      title={"Blog"}
+      subtitle={"Talking about web development, life or just rambling"}
+    >
       <PostWrapper>
-        <SearchPost></SearchPost>
-        <Posts>
-          {
-            posts.map(({ node }) => {
-              return (
-                <Post key={node.fields.slug}>
-                  <b>{node.frontmatter.subtitle}</b>
-                </Post>)
-            })
-          }
-        </Posts>
+        <Posts posts={data.allMarkdownRemark.edges} />
+        <hr />
       </PostWrapper>
     </Common>
   )
 }
 
 export const pageQuery = graphql`
-    {
-      allMarkdownRemark(filter: {frontmatter: {path: {ne: "/uses"}}}) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              date(formatString: "MMMM DD, YYYY")
-              title
-              subtitle
-              description
+  {
+    allMarkdownRemark(
+      filter: { frontmatter: { path: { ne: "/uses" } } }
+      sort: { fields: [frontmatter___title], order: [DESC] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            subtitle
+            description
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                }
+              }
             }
           }
         }
       }
     }
+  }
 `
 
 export default BlogPage

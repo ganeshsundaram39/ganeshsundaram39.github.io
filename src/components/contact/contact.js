@@ -92,6 +92,7 @@ const Contact = props => {
   const [sendMessage, setSendMessage] = useState(false)
 
   const sendEmail = e => {
+    console.log({ e: e.target })
     e.preventDefault()
     setSendMessage(true)
     emailjs

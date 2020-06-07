@@ -49,7 +49,10 @@ const Section = styled.section`
     line-height: 150%;
     word-spacing: 1px;
   }
-
+  .skill-set-wrapper {
+    display: flex;
+    justify-content: center;
+  }
   .skill-set {
     list-style: none;
     width: 60%;
@@ -68,11 +71,11 @@ const Section = styled.section`
   }
 
   .skill-set li svg {
-    font-size: 400%;
+    font-size: 420%;
   }
   .skill-set li svg:hover {
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transform: scale(1.2);
+    transform: scale(1.4);
   }
 
   & .box {
@@ -146,8 +149,8 @@ const Intro = () => {
       placeholderImage: file(relativePath: { eq: "profilepic.jpg" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
-          fluid(quality: 70, maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fluid(quality: 80, maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
       }
@@ -165,19 +168,23 @@ const Intro = () => {
             fluid={data.placeholderImage.childImageSharp.fluid}
             alt="my photo"
             className="profile-pic"
+            backgroundColor
+            style={{
+              boxShadow: ` 0 20px 50px rgba(8, 112, 184, 0.5)`,
+            }}
           />
         </div>
         <div className="col span-1-of-2">
           <p>
-            👋Hey, I'm Ganesh. I'm a Front-End developer living in Mumbai, India.
-            I spend my days practicing my coding skills and learning new
+            👋Hey, I'm Ganesh. I'm a Front-End developer living in Dombivli,
+            India. I spend my days practicing my coding skills and learning new
             techniques. I would love to build a great and fancy website for you.
             Aside from web development, I enjoy listening to music, nature walk,
             exercise and stalking beautiful looking websites.
           </p>
         </div>
       </div>
-      <div className="row">
+      <div className="row skill-set-wrapper">
         <ul className="skill-set">
           {skills.map(skill => (
             <li key={skill.title} title={skill.title}>

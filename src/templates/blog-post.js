@@ -1,15 +1,22 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import Common from "../components/common/common"
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
+  const { title, subtitle, date, description } = data.markdownRemark.frontmatter
   const { previous, next } = pageContext
-  console.log({ post, siteTitle })
-  return <>{post.html}</>
+  return (
+    <Common
+      title={title}
+      isBlogPost={true}
+      subtitle={subtitle}
+      description={description}
+      html={post.html}
+    ></Common>
+  )
 }
-
-export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -24,9 +31,12 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
         date(formatString: "MMMM DD, YYYY")
         description
       }
     }
   }
 `
+
+export default BlogPostTemplate

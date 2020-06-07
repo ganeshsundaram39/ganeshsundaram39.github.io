@@ -8,8 +8,8 @@ const Background = ({ children, styles }) => (
       query {
         desktop: file(relativePath: { eq: "hero.jpg" }) {
           childImageSharp {
-            fluid(quality: 40, maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+            fluid(quality: 30, maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -17,7 +17,7 @@ const Background = ({ children, styles }) => (
     `}
     render={data => {
       const backgroundFluidImageStack = [
-        `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))`,
+        `linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75))`,
         data.desktop.childImageSharp.fluid,
       ]
       return (
@@ -25,6 +25,7 @@ const Background = ({ children, styles }) => (
           Tag="header"
           fluid={backgroundFluidImageStack}
           className="header-bg"
+          backgroundColor={`#000`}
           style={{
             height: "80vh",
             backgroundPosition: "top",

@@ -9,7 +9,7 @@ const Background = ({ children, styles }) => (
         desktop: file(relativePath: { eq: "sealink.jpg" }) {
           childImageSharp {
             fluid(quality: 50, maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
@@ -33,6 +33,7 @@ const Background = ({ children, styles }) => (
             backgroundSize: "cover",
             backgroundPosition: "50% 100%",
           }}
+          backgroundColor={`#fff`}
         >
           {children}
         </BackgroundImage>

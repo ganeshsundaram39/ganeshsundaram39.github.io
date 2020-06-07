@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 const Nav = styled.nav`
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
 
   .main-nav {
@@ -53,10 +54,16 @@ const Nav = styled.nav`
 
 const navs = [
   { name: "home", to: "/" },
-  // { name: "blog", to: "/blog" },
+  { name: "blog", to: "/blog" },
   { name: "uses", to: "/uses" },
 ]
-
+const isActive = ({ isCurrent, location }) => {
+  return isCurrent && location.pathname === "/"
+    ? { style: { display: "none" } }
+    : isCurrent
+    ? { style: { borderBottom: "2px solid #0669a8" } }
+    : {}
+}
 export const Navbar = () => {
   return (
     <Nav>
@@ -64,10 +71,7 @@ export const Navbar = () => {
         <ul className="main-nav">
           {navs.map(nav => (
             <li key={nav.name}>
-              <Link
-                to={nav.to}
-                activeStyle={{ borderBottom: "2px solid #0669a8" }}
-              >
+              <Link to={nav.to} getProps={isActive}>
                 {nav.name}
               </Link>
             </li>
