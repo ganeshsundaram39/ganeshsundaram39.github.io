@@ -60,7 +60,7 @@ const Anchor = styled.a`
     background-color: #0f86d2;
     border-radius: 200px;
     padding: 5px 20px;
-    margin: 10px 0 25px 0;
+    margin: 10px 0 35px 0;
     display: inline-flex;
     color: #fff;
     font-weight: 500;

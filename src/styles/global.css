@@ -152,7 +152,7 @@ section {
 
 @media only screen and (max-width: 480px) {
   section {
-    padding: 25px 0;
+    padding: 40px 0;
   }
 
   h1 {
@@ -181,5 +181,6 @@ section {
 
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
 }

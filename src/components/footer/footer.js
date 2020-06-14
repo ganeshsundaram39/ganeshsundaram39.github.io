@@ -13,6 +13,7 @@ const Footer = styled.footer`
     padding: 2%;
     background-color: #555555;
     color: #fff;
+    margin-top: -5px;
   }
 
   .footer__links {
@@ -111,7 +112,7 @@ const footer = props => {
         <div className="contacts">
           <div className="contact">
             <FontAwesomeIcon icon={faWhatsapp} />
-            <span id="whatsapp">+91 976 8721 841</span>
+            <span x-ms-format-detection="none" id="whatsapp">+91 976 8721 841</span>
           </div>
           <div className="contact">
             <FontAwesomeIcon icon={faEnvelope} />
@@ -121,8 +122,7 @@ const footer = props => {
         <div className="links">{SocialLinks}</div>
       </div>
       <div className="row center">
-        Developed with <span style={{ color: "red" }}>💖</span> by Ganesh
-        Sundaram | {new Date().getFullYear()}
+        © Copyright {new Date().getFullYear()}
       </div>
     </Footer>
   )

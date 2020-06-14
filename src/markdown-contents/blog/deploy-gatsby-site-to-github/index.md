@@ -1,8 +1,8 @@
 ---
 path: "/deploy-gatsby-site-to-github-using-actions"
-title: "#1"
+title: "#2"
 subtitle: "Deploy Gatsby site to Github using actions"
-date: "2020-04-19"
+date: "2020-05-31"
 description: "A simple guide to host your Gatsby site in Github using Github-actions"
 featuredImage: "./gatsbyjs-github.jpg"
 ---

@@ -99,7 +99,7 @@ const Section = styled.section`
   @media only screen and (max-width: 767px) {
     & p {
       width: 99%;
-      margin: 0 1%;
+      margin: 4% 1%;
     }
 
     & .box svg {

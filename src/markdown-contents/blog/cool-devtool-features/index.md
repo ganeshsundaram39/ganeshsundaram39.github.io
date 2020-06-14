@@ -1,6 +1,6 @@
 ---
 path: "/cool-devtool-features"
-title: "#2"
+title: "#1"
 subtitle: "Cool Chrome Devtool Features"
 date: "2020-04-26"
 description: "Learn about chrome devtool features you were unaware of"
