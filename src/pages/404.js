@@ -28,54 +28,52 @@ const CanvasWrapper = styled.div`
   }
 `
 
-
 // Canvas tutorial by WES BOS's JAVACRIPT30 implemented in react hooks
 
-let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
-let hue = 0;
-let direction = true;
-let ctx;
-
+let isDrawing = false
+let lastX = 0
+let lastY = 0
+let hue = 0
+let direction = true
+let ctx
 
 function draw({ clientX, clientY }) {
-  if (!isDrawing) return; // stop the fn from running when they are not moused down
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-  ctx.beginPath();
+  if (!isDrawing) return // stop the fn from running when they are not moused down
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
+  ctx.beginPath()
   // start from
-  ctx.moveTo(lastX, lastY);
+  ctx.moveTo(lastX, lastY)
   // go to
-  ctx.lineTo(clientX, clientY);
-  ctx.stroke();
+  ctx.lineTo(clientX, clientY)
+  ctx.stroke()
   lastX = clientX
   lastY = clientY
 
-  hue++;
+  hue++
   if (hue >= 360) {
-    hue = 0;
+    hue = 0
   }
   if (ctx.lineWidth >= 150 || ctx.lineWidth <= 1) {
-    direction = !direction;
+    direction = !direction
   }
 
   if (direction) {
-    ctx.lineWidth++;
+    ctx.lineWidth++
   } else {
-    ctx.lineWidth--;
+    ctx.lineWidth--
   }
 }
 const NotFoundPage = () => {
   const canvasEl = useRef(null)
 
   useEffect(() => {
-    ctx = canvasEl.current.getContext('2d');
-    canvasEl.current.width = window.innerWidth;
-    canvasEl.current.height = window.innerHeight;
-    ctx.strokeStyle = '#BADA55';
-    ctx.lineJoin = 'round';
-    ctx.lineCap = 'round';
-    ctx.lineWidth = 100;
+    ctx = canvasEl.current.getContext("2d")
+    canvasEl.current.width = window.innerWidth
+    canvasEl.current.height = window.innerHeight
+    ctx.strokeStyle = "#BADA55"
+    ctx.lineJoin = "round"
+    ctx.lineCap = "round"
+    ctx.lineWidth = 100
   }, [])
 
   return (
@@ -85,13 +83,13 @@ const NotFoundPage = () => {
         <canvas
           ref={canvasEl}
           onMouseDown={e => {
-            isDrawing = true;
+            isDrawing = true
             lastX = e.clientX
             lastY = e.clientY
           }}
           onMouseMove={e => draw(e)}
-          onMouseOut={() => isDrawing = false}
-          onMouseUp={() => isDrawing = false}
+          onMouseOut={() => (isDrawing = false)}
+          onMouseUp={() => (isDrawing = false)}
         ></canvas>
         <h1>PAGE NOT FOUND</h1>
         <p>You just hit a route that doesn&#39;t exist... the sadness.</p>

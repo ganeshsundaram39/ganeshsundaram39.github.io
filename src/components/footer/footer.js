@@ -112,7 +112,9 @@ const footer = props => {
         <div className="contacts">
           <div className="contact">
             <FontAwesomeIcon icon={faWhatsapp} />
-            <span x-ms-format-detection="none" id="whatsapp">+91 976 8721 841</span>
+            <span x-ms-format-detection="none" id="whatsapp">
+              +91 976 8721 841
+            </span>
           </div>
           <div className="contact">
             <FontAwesomeIcon icon={faEnvelope} />
@@ -121,9 +123,7 @@ const footer = props => {
         </div>
         <div className="links">{SocialLinks}</div>
       </div>
-      <div className="row center">
-        © Copyright {new Date().getFullYear()}
-      </div>
+      <div className="row center">© Copyright {new Date().getFullYear()}</div>
     </Footer>
   )
 }
