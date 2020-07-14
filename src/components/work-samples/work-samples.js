@@ -89,7 +89,7 @@ const works = [
     image: "budget-webapp",
     name: "Budget WebApp",
     para:
-      "Budget WebApp is developed using Reactjs and is used to save your monthly budget.",
+      "Budget WebApp is developed using Reactjs + react-snap and is used to save your monthly budget.",
     alt: "Budget WebApp using react",
     live: "https://ganeshsundaram39.github.io/budgetic-redux/",
   },
@@ -97,7 +97,7 @@ const works = [
     image: "recipe-webapp",
     name: "Recipe WebApp",
     para:
-      "Recipe WebApp is developed using Reactjs and is used to save your food recipes.",
+      "Recipe WebApp is developed using Reactjs + react-snap and is used to save your food recipes.",
     alt: "recipe WebApp using react",
     live: "https://ganeshsundaram39.github.io/recipe-react-webapp/",
   },
@@ -105,7 +105,7 @@ const works = [
     image: "search-countries",
     name: "Search Countries",
     para:
-      "Search Countries is developed using Angular and it helps you in searching countries.",
+      "Search Countries is developed using Angular + Scully and it helps in searching countries.",
     alt: "Search Countries",
     live: "https://ganeshsundaram39.github.io/search-countries/",
   },
@@ -113,7 +113,7 @@ const works = [
     image: "got",
     name: "GOT",
     para:
-      "GOT is a SPA developed using Angular and it gives you information related to Game of thrones.",
+      "GOT is a SPA developed using Angular + Scully and it gives you information related to Game of thrones.",
     alt: "GOT",
     live: "https://ganeshsundaram39.github.io/got/",
   },
