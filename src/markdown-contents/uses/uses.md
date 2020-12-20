@@ -22,6 +22,7 @@ Most of the time I enable only those which I need at a given moment.
 **💻 Terminal**
 
 [oh-my-zsh](https://ohmyz.sh/) is my default terminal.
+
 [Z](https://github.com/rupa/z) for quick cd.
 
 <br>
