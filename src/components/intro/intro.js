@@ -207,7 +207,7 @@ const Intro = () => {
           <FontAwesomeIcon icon={faChartBar} />
           <h3>2. Research and Prototyping</h3>
           <p>
-            Research current website design trends, marketing techniques and
+            Research current website trends, marketing techniques and
             analyzing its impact on the audience. Create multiple prototypes
             using pen and paper.
           </p>

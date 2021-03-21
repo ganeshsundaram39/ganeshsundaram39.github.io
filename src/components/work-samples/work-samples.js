@@ -7,7 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons"
 
 import styled from "styled-components"
+import {
 
+  isMobile
+} from "react-device-detect";
 const Section = styled.section`
   & {
     background-color: #e8e8e8;
@@ -92,6 +95,7 @@ const works = [
       "Budget WebApp is developed using Reactjs + react-snap and is used to save your monthly budget.",
     alt: "Budget WebApp using react",
     live: "https://ganeshsundaram39.github.io/budgetic-redux/",
+    notInMobile:true,
   },
   {
     image: "recipe-webapp",
@@ -100,6 +104,8 @@ const works = [
       "Recipe WebApp is developed using Reactjs + react-snap and is used to save your food recipes.",
     alt: "recipe WebApp using react",
     live: "https://ganeshsundaram39.github.io/recipe-react-webapp/",
+    notInMobile:true,
+
   },
   {
     image: "search-countries",
@@ -163,7 +169,15 @@ const WorkSamples = () => {
   }, {})
 
   const [count, setCount] = useState(1)
+  const checkMobile= live=>{
+    if(isMobile){
+      alert('Made for Desktop and Laptop Experience!')
+    }
 
+    return {
+      href:live
+    }
+  }
   return (
     <Section id="samples">
       <div className="row center">
@@ -182,7 +196,11 @@ const WorkSamples = () => {
           <div className="col span-1-of-2 box">
             <h3>{work.name}</h3>
             <p>{work.para}</p>
-            <Anchor rel="noopener noreferrer" href={work.live} target="_blank">
+            <Anchor rel="noopener noreferrer"
+
+           {...(work.notInMobile?checkMobile(work.live) : {href:work.live})}
+
+              target="_blank">
               I Wanna Look
               <FontAwesomeIcon
                 icon={faArrowRight}
