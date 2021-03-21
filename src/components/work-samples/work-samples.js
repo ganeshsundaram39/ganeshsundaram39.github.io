@@ -9,7 +9,7 @@ import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons"
 import styled from "styled-components"
 import {
 
-  isMobile
+  isMobileOnly
 } from "react-device-detect";
 const Section = styled.section`
   & {
@@ -95,7 +95,7 @@ const works = [
       "Budget WebApp is developed using Reactjs + react-snap and is used to save your monthly budget.",
     alt: "Budget WebApp using react",
     live: "https://ganeshsundaram39.github.io/budgetic-redux/",
-    notInMobile:true,
+    inMobile:true,
   },
   {
     image: "recipe-webapp",
@@ -104,7 +104,7 @@ const works = [
       "Recipe WebApp is developed using Reactjs + react-snap and is used to save your food recipes.",
     alt: "recipe WebApp using react",
     live: "https://ganeshsundaram39.github.io/recipe-react-webapp/",
-    notInMobile:true,
+    inMobile:true,
 
   },
   {
@@ -169,22 +169,13 @@ const WorkSamples = () => {
   }, {})
 
   const [count, setCount] = useState(1)
-  const checkMobile= live=>{
-    if(isMobile){
-      alert('Made for Desktop and Laptop Experience!')
-    }
-
-    return {
-      href:live
-    }
-  }
   return (
     <Section id="samples">
       <div className="row center">
         <h2>My Work Samples</h2>
       </div>
       {works.slice(0, 4 * count).map(work => (
-        <div key={work.name} className="row">
+       work.inMobile && isMobileOnly?null:<div key={work.name} className="row">
           <div className="col span-1-of-2 image-container">
             <Img
               fluid={data[work.image].fluid}
@@ -198,7 +189,7 @@ const WorkSamples = () => {
             <p>{work.para}</p>
             <Anchor rel="noopener noreferrer"
 
-           {...(work.notInMobile?checkMobile(work.live) : {href:work.live})}
+              href={work.live}
 
               target="_blank">
               I Wanna Look

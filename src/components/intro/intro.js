@@ -138,7 +138,7 @@ const skills = [
   { title: "Angular", icon: faAngular },
   { title: "SASS", icon: faSass },
   { title: "Node JS", icon: faNode },
-  { title: "MySql", icon: faDatabase },
+  { title: "MySql | MongoDB", icon: faDatabase },
   { title: "Git", icon: faGit },
   { title: "Ubuntu", icon: faUbuntu },
 ]

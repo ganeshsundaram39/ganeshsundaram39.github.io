@@ -74,6 +74,7 @@ const BlogPage = ({ data }) => {
   return (
     <Common
       title={"Blog"}
+      description={"Blog by Ganesh Sundaram"}
       subtitle={"Talking about web development, life or just rambling"}
     >
       <PostWrapper>

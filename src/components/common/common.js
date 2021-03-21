@@ -67,7 +67,7 @@ const Common = ({
   isBlogPost,
 }) => {
   return (
-    <Layout title={isBlogPost ? subtitle : title} description={description+ " by Ganesh Sundaram"}>
+    <Layout title={isBlogPost ? subtitle : title} description={description}>
       <Background styles={{ height: "60vh" }}>
         <Navbar />
         <FrontMatterBox>
