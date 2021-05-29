@@ -57,6 +57,9 @@ Most of the time I enable only those which I need at a given moment.
 
 [Formatting Toggle](https://marketplace.visualstudio.com/items?itemName=tombonnike.vscode-status-bar-format-toggle) - Allows you to toggle the Formatter (Prettier, Beautify, …) on and off with a simple click.
 
+[Cloak](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-cloak#review-details) - Cloak hides/shows your secrets in environment files, to avoid accidentally sharing them with everyone who sees your screen.
+
+
 <br>
 
 **🎉 Browsers**<br>
@@ -86,11 +89,22 @@ Most of the time I enable only those which I need at a given moment.
 
 [Postman](https://www.getpostman.com/) - Postman Simplifies API Development & Testing.
 
+[AnyDesk](https://anydesk.com/en) - Connect to a computer remotely, be it from the other end of the office or halfway around the world using anydesk.
+
 <br>
 
 **📊 Gnome extensions**
 
 [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/) - Display system information in gnome-shell status bar, such as memory usage, cpu usage, network rates.
+
+<br>
+
+**💯 Productivity**
+
+[Trello](https://trello.com/) - Trello helps teams move work forward.
+
+[Slack](https://slack.com/intl/en-in/) - Slack makes it downright pleasant to work together
+
 
 <br>
 
