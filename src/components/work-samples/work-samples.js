@@ -89,6 +89,15 @@ const Anchor = styled.a`
 
 const works = [
   {
+    image: "issue-tracker",
+    name: "Issue Tracker WebApp",
+    para:
+      "Issue Tracker is developed using MERN Stack deployed on Heroku and is used to track your issues.",
+    alt: "Issue Tracker WebApp using MERN Stack",
+    live: "https://issue-tracker-redux.herokuapp.com/",
+
+  },
+  {
     image: "budget-webapp",
     name: "Budget WebApp",
     para:
