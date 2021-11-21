@@ -122,7 +122,7 @@ const works = [
     para:
       "Search Countries is developed using Angular + Scully and it helps in searching countries.",
     alt: "Search Countries",
-    live: "https://ganeshsundaram39.github.io/search-countries/",
+    live: "https://search-countries-angular.vercel.app",
   },
   {
     image: "got",
