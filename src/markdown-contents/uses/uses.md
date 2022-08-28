@@ -65,7 +65,10 @@ Most of the time I enable only those which I need at a given moment.
 <br>
 
 **🎉 Browsers**<br>
-[Brave](https://brave.com/) (my default browser)
+
+[Chrome](https://www.google.com/chrome/) (my default browser)
+
+[Brave](https://brave.com/)
 
 [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
@@ -76,6 +79,10 @@ Most of the time I enable only those which I need at a given moment.
 [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) - A React debugging tools to the Chrome Developer Tools.
 
 [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) - Redux DevTools for debugging application's state changes.
+
+[Chrome Notes](https://chrome.google.com/webstore/detail/chrome-notes/lnfempckkegmaeleniojhjplemmebgfi?hl=en) - A simple notepad extension for Google Chrome
+
+[Grammarly](https://chrome.google.com/webstore/detail/grammarly-grammar-checker/kbfnbcaeplbcioakkpcpgfkobkghlhen) - Grammarly for Chrome offers real-time suggestions to help you write your best online, no matter what you’re working on in your browser.
 
 [ColorZilla](https://www.colorzilla.com/chrome/) - With ColorZilla you can get a color reading from any point in your browser, quickly adjust this color and paste it into another program.
 
