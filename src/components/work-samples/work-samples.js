@@ -7,10 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faArrowDown } from "@fortawesome/free-solid-svg-icons"
 
 import styled from "styled-components"
-import {
-
-  isMobileOnly
-} from "react-device-detect";
+import { isMobileOnly } from "react-device-detect"
 const Section = styled.section`
   & {
     background-color: #e8e8e8;
@@ -95,9 +92,8 @@ const works = [
       "Issue Tracker is developed using MERN Stack deployed on Heroku and is used to track your issues.",
     alt: "Issue Tracker WebApp using MERN Stack",
     live: "https://issue-tracker-redux.herokuapp.com/",
-    showGithubLink:true,
-    githubUrl:'https://github.com/ganeshsundaram39/issue-tracker'
-
+    showGithubLink: true,
+    githubUrl: "https://github.com/ganeshsundaram39/issue-tracker",
   },
   {
     image: "budget-webapp",
@@ -106,7 +102,7 @@ const works = [
       "Budget WebApp is developed using Reactjs + react-snap and is used to save your monthly budget.",
     alt: "Budget WebApp using react",
     live: "https://ganeshsundaram39.github.io/budgetic-redux/",
-    inMobile:true,
+    inMobile: true,
   },
   {
     image: "recipe-webapp",
@@ -115,8 +111,7 @@ const works = [
       "Recipe WebApp is developed using Reactjs + react-snap and is used to save your food recipes.",
     alt: "recipe WebApp using react",
     live: "https://ganeshsundaram39.github.io/recipe-react-webapp/",
-    inMobile:true,
-
+    inMobile: true,
   },
   {
     image: "search-countries",
@@ -185,57 +180,65 @@ const WorkSamples = () => {
       <div className="row center">
         <h2>My Work Samples</h2>
       </div>
-      {works.slice(0, 4 * count).map(work => (
-       work.inMobile && isMobileOnly?null:<div key={work.name} className="row">
-          <div className="col span-1-of-2 image-container">
-            <Img
-              fluid={data[work.image].fluid}
-              alt={work.alt}
-              className="image"
-              backgroundColor
-            />
-          </div>
-          <div className="col span-1-of-2 box">
-            <h3>{work.name}</h3>
-            <p>{work.para}</p>
-           {work.showGithubLink? <Anchor rel="noopener noreferrer"
-
-              href={work.githubUrl}
-
-              target="_blank">
-              Github
-              <FontAwesomeIcon
-                icon={faArrowRight}
-                transform={{ rotate: -35 }}
+      {works.slice(0, 4 * count).map(work =>
+        work.inMobile && isMobileOnly ? null : (
+          <div key={work.name} className="row">
+            <div className="col span-1-of-2 image-container">
+              <Img
+                fluid={data[work.image].fluid}
+                alt={work.alt}
+                className="image"
+                backgroundColor
               />
-            </Anchor>: <Anchor rel="noopener noreferrer"
-
-href={work.live}
-
-target="_blank">
-Live
-<FontAwesomeIcon
-  icon={faArrowRight}
-  transform={{ rotate: -35 }}
-/>
-</Anchor>}
+            </div>
+            <div className="col span-1-of-2 box">
+              <h3>{work.name}</h3>
+              <p>{work.para}</p>
+              {work.showGithubLink ? (
+                <Anchor
+                  rel="noopener noreferrer"
+                  href={work.githubUrl}
+                  target="_blank"
+                >
+                  Github
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    transform={{ rotate: -35 }}
+                  />
+                </Anchor>
+              ) : (
+                <Anchor
+                  rel="noopener noreferrer"
+                  href={work.live}
+                  target="_blank"
+                >
+                  Live
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                    transform={{ rotate: -35 }}
+                  />
+                </Anchor>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      )}
       {count < Math.ceil(works.length / 4) && (
         <div className="row center" style={{ marginTop: "2%" }}>
           {" "}
-    {      <Anchor
-            down
-            rel="noopener noreferrer"
-            href="#"
-            onClick={e => {
-              e.preventDefault()
-              setCount(count + 1)
-            }}
-          >
-            Show More <FontAwesomeIcon icon={faArrowDown} />
-          </Anchor>}
+          {
+            <Anchor
+              down
+              rel="noopener noreferrer"
+              href="#"
+              onClick={e => {
+                e.preventDefault()
+                setCount(count + 1)
+              }}
+            >
+              Show More <FontAwesomeIcon icon={faArrowDown} />
+            </Anchor>
+          }
         </div>
       )}
     </Section>
