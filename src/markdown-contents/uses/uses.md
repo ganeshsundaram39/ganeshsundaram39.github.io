@@ -21,7 +21,9 @@ Most of the time I enable only those which I need at a given moment.
 
 **💻 Terminal**
 
-[oh-my-zsh](https://ohmyz.sh/) is my default terminal.
+[Tabby](https://tabby.sh/) is an infinitely customizable cross-platform terminal app.
+
+[oh-my-zsh](https://ohmyz.sh/) is my default shell.
 
 [Z](https://github.com/rupa/z) for quick cd.
 

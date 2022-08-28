@@ -95,6 +95,8 @@ const works = [
       "Issue Tracker is developed using MERN Stack deployed on Heroku and is used to track your issues.",
     alt: "Issue Tracker WebApp using MERN Stack",
     live: "https://issue-tracker-redux.herokuapp.com/",
+    showGithubLink:true,
+    githubUrl:'https://github.com/ganeshsundaram39/issue-tracker'
 
   },
   {
@@ -196,24 +198,34 @@ const WorkSamples = () => {
           <div className="col span-1-of-2 box">
             <h3>{work.name}</h3>
             <p>{work.para}</p>
-            <Anchor rel="noopener noreferrer"
+           {work.showGithubLink? <Anchor rel="noopener noreferrer"
 
-              href={work.live}
+              href={work.githubUrl}
 
               target="_blank">
-              I Wanna Look
+              Github
               <FontAwesomeIcon
                 icon={faArrowRight}
                 transform={{ rotate: -35 }}
               />
-            </Anchor>
+            </Anchor>: <Anchor rel="noopener noreferrer"
+
+href={work.live}
+
+target="_blank">
+Live
+<FontAwesomeIcon
+  icon={faArrowRight}
+  transform={{ rotate: -35 }}
+/>
+</Anchor>}
           </div>
         </div>
       ))}
       {count < Math.ceil(works.length / 4) && (
         <div className="row center" style={{ marginTop: "2%" }}>
           {" "}
-          <Anchor
+    {      <Anchor
             down
             rel="noopener noreferrer"
             href="#"
@@ -223,7 +235,7 @@ const WorkSamples = () => {
             }}
           >
             Show More <FontAwesomeIcon icon={faArrowDown} />
-          </Anchor>
+          </Anchor>}
         </div>
       )}
     </Section>
