@@ -66,9 +66,9 @@ Most of the time I enable only those which I need at a given moment.
 
 **🎉 Browsers**<br>
 
-[Chrome](https://www.google.com/chrome/) (my default browser)
+[Brave](https://brave.com/) (my default browser)
 
-[Brave](https://brave.com/)
+[Chrome](https://www.google.com/chrome/)
 
 [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
