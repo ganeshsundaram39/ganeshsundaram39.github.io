@@ -96,7 +96,8 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
       ].concat(meta)}
     >
-        <script defer data-domain="ganeshsundaram39.github.io" src="http://localhost:3000/js/plausible.js"></script>
+      <script defer data-domain="ganeshsundaram39.github.io" src="http://localhost:8000/js/plausible.js"></script>
+
     </Helmet>
   )
 }
