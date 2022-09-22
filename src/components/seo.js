@@ -95,7 +95,9 @@ function SEO({ description, lang, meta, title, siteUrl }) {
           content: `/icons/browserconfig.xml`,
         },
       ].concat(meta)}
-    />
+    >
+        <script defer data-domain="ganeshsundaram39.github.io" src="http://localhost:3000/js/plausible.js"></script>
+    </Helmet>
   )
 }
 
