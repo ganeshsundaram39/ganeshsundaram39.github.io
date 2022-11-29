@@ -94,7 +94,7 @@ const Header = () => (
     <Navbar></Navbar>
     <NameTextBox>
       <h1 className="center">Ganesh Sundaram</h1>
-      <div className="tagline center">Front-End Web Developer</div>
+      <div className="tagline center">Senior Front-End Developer</div>
       <div className="center social-links">{SocialLinks}</div>
       <div className="center know-me-better">
         <a href="#about" rel="noopener noreferrer">
