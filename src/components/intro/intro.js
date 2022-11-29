@@ -176,7 +176,7 @@ const Intro = () => {
         </div>
         <div className="col span-1-of-2">
           <p>
-            👋Hey, I'm Ganesh. I'm a Front-End developer living in Dombivli,
+            👋Hey, I&apos;m Ganesh. I&apos;m a Front-End developer living in Dombivli,
             India. I spend my days practicing my coding skills and learning new
             techniques. I would love to build a great and fancy website for you.
             Aside from web development, I enjoy listening to music, nature walk,
@@ -218,7 +218,7 @@ const Intro = () => {
           <FontAwesomeIcon icon={faCode} />
           <h3>3. Code</h3>
           <p>
-            Once I'am happy with the prototype I code the project using my
+            Once I&apos;am happy with the prototype I code the project using my
             favorite text editor.
           </p>
         </div>
