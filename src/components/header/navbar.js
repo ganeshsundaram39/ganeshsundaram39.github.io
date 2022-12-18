@@ -76,14 +76,15 @@ export const Navbar = () => {
               </Link>
             </li>
           ))}
-          {false && (
+          {true && (
             <li>
               {" "}
               <a
                 rel="noopener noreferrer"
                 className="resume"
-                download
-                href="/resume/resume.pdf"
+
+                href="/resume/Resume.pdf"
+                target="_blank"
               >
                 Resume
               </a>
